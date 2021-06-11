@@ -40,9 +40,9 @@ router.post('/subscription', async (ctx) => {
 })
 
 // Order 
-router.post('/userdata', async (ctx) => {
+router.post('/order', async (ctx) => {
   try {
-    const { userName, surname, phone, address }  = ctx.request.body;
+    const { userName, surname, phone, address, cart } = ctx.request.body;
 
     if (!userName && !surname && !phone && !address){
       ctx.body = 'Введите данные'
